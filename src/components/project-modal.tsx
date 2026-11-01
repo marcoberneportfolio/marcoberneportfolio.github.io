@@ -6,8 +6,9 @@ import { COPY, CV } from '@/data/site';
 import { cn } from '@/lib/utils';
 
 /** Plays a video; vertical ones (reels) sit in a sober phone frame. */
-function ProjectVideo({ item }: { item: ProjectImage }) {
+function ProjectVideo({ item, poster }: { item: ProjectImage; poster: string }) {
 	const [vertical, setVertical] = useState(true);
+	const [ready, setReady] = useState(false);
 
 	return (
 		<div className={cn('relative mx-auto max-w-full', vertical ? 'w-fit rounded-[2.6rem] bg-ink-deep p-2.5 shadow-xl' : 'w-full')}>
@@ -16,19 +17,29 @@ function ProjectVideo({ item }: { item: ProjectImage }) {
 				src={item.src}
 				controls
 				playsInline
-				onLoadedMetadata={(event) => setVertical(event.currentTarget.videoHeight > event.currentTarget.videoWidth)}
+				preload="metadata"
+				poster={poster}
+				onLoadedMetadata={(event) => {
+					setVertical(event.currentTarget.videoHeight > event.currentTarget.videoWidth);
+					setReady(true);
+				}}
 				aria-label={item.alt || 'Vidéo du projet'}
-				className={cn('block max-w-full bg-ink', vertical ? 'max-h-[78vh] w-auto rounded-[2.1rem]' : 'w-full')}
+				// Holds the phone shape until the video knows its own size
+				className={cn(
+					'block max-w-full bg-ink object-cover',
+					vertical ? 'max-h-[78vh] w-auto rounded-[2.1rem]' : 'w-full',
+					!ready && 'aspect-[9/16] h-[78vh] max-h-[78vh]'
+				)}
 			/>
 		</div>
 	);
 }
 
-function Media({ item }: { item: ProjectImage }) {
+function Media({ item, poster }: { item: ProjectImage; poster?: string }) {
 	if (item.type === 'embed') {
 		return <iframe src={item.src} title={item.alt || 'Vidéo du projet'} allowFullScreen className="aspect-video w-full" />;
 	}
-	if (item.type === 'video') return <ProjectVideo item={item} />;
+	if (item.type === 'video') return <ProjectVideo item={item} poster={poster ?? ''} />;
 	return <img src={item.src} alt={item.alt} loading="lazy" className="h-auto w-full" />;
 }
 
@@ -95,7 +106,7 @@ export default function ProjectModal({
 				<div className="order-2 flex flex-col gap-6 lg:order-1">
 					{!videoOnly && <Media item={project.cover} />}
 					{project.gallery.map((item) => (
-						<Media key={item.src} item={item} />
+						<Media key={item.src} item={item} poster={project.cover.src} />
 					))}
 				</div>
 
