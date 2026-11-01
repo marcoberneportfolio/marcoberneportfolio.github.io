@@ -59,8 +59,9 @@ function spotStyle(spot: (typeof SPOTS)[number]) {
 
 /**
  * Projects scattered around the name, pinned while the page scrolls: as it moves
- * they spread out of the screen and the text fades before the next section. The
- * scroll position only updates CSS variables, so React never re-renders.
+ * they spread out of the screen and the text fades while the next section rises
+ * over the pinned screen, so no empty screen is left between the two. The scroll
+ * position only updates CSS variables, so React never re-renders.
  */
 export default function HeroSection({ onOpen }: { onOpen: (index: number) => void }) {
 	const root = useRef<HTMLElement>(null);
@@ -95,7 +96,7 @@ export default function HeroSection({ onOpen }: { onOpen: (index: number) => voi
 	}, []);
 
 	return (
-		<section ref={root} id="hero" aria-label="Présentation" className="relative h-[130svh] bg-limestone motion-reduce:h-svh">
+		<section ref={root} id="hero" aria-label="Présentation" className="relative h-[200svh] bg-limestone motion-reduce:h-svh">
 			<div className="sticky top-0 h-svh overflow-hidden">
 				{PICKS.map((project, i) => (
 					<button
