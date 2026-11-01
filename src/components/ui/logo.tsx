@@ -1,13 +1,14 @@
 import { SITE } from '@/data/site';
 import { cn } from '@/lib/utils';
 
-/** MB monogram: the M rises into the back of a taller B, whose lower arm stops short of the upright. */
+/** MB monogram: a blue B sits above and beside the M, separated from it by a thin gap. */
 export default function Logo({ className }: { className?: string }) {
 	return (
-		<svg viewBox="160 160 938 915" fill="currentColor" role="img" aria-label={SITE.name} className={cn('block h-12 w-auto', className)}>
+		<svg viewBox="145 139 784 721" role="img" aria-label={SITE.name} className={cn('block h-11 w-auto', className)}>
+			<path fill="currentColor" d="M145 264H255L405.5 540L531.6 264H644V860H552.6V419L405.9 705.5L236 417V860H145Z" />
 			<path
-				fillRule="evenodd"
-				d="M160 322H308L468 668L636 376V160H860C985 160 1063 245 1063 355C1063 435 1020 488 950 510C1040 537 1098 612 1098 720C1098 850 1000 933 850 933H765V832H845C925 832 968 790 968 715C968 625 925 573 848 573H747V1074H636V583L441 922L262 507V1075H160ZM747 266H858C915 266 940 300 940 355C940 430 905 467 848 467H747Z"
+				fill="#6db0d9"
+				d="M778.5 657C801.6 643.5 816.7 621.7 821.8 595.7C826.6 571.2 825.2 546.6 818.5 522.7C811.5 498.1 792.3 474 768 464.9C755.9 459.9 743.4 456.2 730 456.1L660.3 455.9L660.4 376.8L717 376.6C730.8 376.8 743.3 373.8 756.2 369.1C776.6 360.7 791.5 343.6 797.2 322.2C805 293.5 802.9 252.4 780.9 233.1C767.3 221.1 749.1 215.5 731 215.5L643.8 215.3L643.8 248.7L531.7 248.7L531.7 139.3L739.9 139.4C765.1 139.4 789.1 145 812.1 153.8C843 165.5 873.5 191.5 886.1 221.8C900.1 255.5 902.7 293.1 891.9 328C883.1 356.6 863.6 378.8 838.9 394.9L810.7 410.8C833.7 421.3 855.1 432.8 874 449C890.7 463.3 902.8 481.2 911.4 501.5C927.2 538.6 928.8 579.3 920.4 618.5C904.6 692.8 844.2 732.4 772.3 744.2C753.1 747 734.9 747.6 715.6 747.4L660.8 747.5L660.8 669.4L733.9 668.9C749.7 668.8 764 663.8 778.5 657"
 			/>
 		</svg>
 	);
