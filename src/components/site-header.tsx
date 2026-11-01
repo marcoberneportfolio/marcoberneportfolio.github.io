@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import ActionLink from '@/components/ui/action-link';
 import CvLink from '@/components/ui/cv-link';
-import { COPY, CV, NAV, SITE } from '@/data/site';
+import Logo from '@/components/ui/logo';
+import { COPY, CV, NAV } from '@/data/site';
 
 export default function SiteHeader() {
 	const [open, setOpen] = useState(false);
@@ -10,8 +11,8 @@ export default function SiteHeader() {
 	return (
 		<header className="fixed inset-x-0 top-0 z-40 border-b border-line bg-paper">
 			<div className="mx-auto flex h-[72px] max-w-[1320px] items-center justify-between gap-6 px-5 md:px-10">
-				<ActionLink to="top" variant="quiet" onNavigate={close} className="border-0 py-0 font-display text-3xl font-normal tracking-wide whitespace-nowrap">
-					{SITE.name}
+				<ActionLink to="top" variant="quiet" onNavigate={close} className="border-0 py-0">
+					<Logo />
 				</ActionLink>
 
 				<nav aria-label="Navigation principale" className="hidden items-center gap-9 md:flex">
