@@ -1,0 +1,76 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Bebas Neue', 'Arial Narrow', Impact, sans-serif;
+
+  /* Night blue, white and limestone, with Marco's blue as the only accent */
+  --color-ink: #14263f;
+  --color-ink-deep: #0f1e33;
+  --color-paper: #ffffff;
+  --color-limestone: #f6f3ee;
+  --color-slate: #566377;
+  --color-line: #e2ded6;
+  --color-accent: #6781ad;
+  /* Same blue, darkened to stay readable as small text on white */
+  --color-accent-deep: #46628f;
+  --color-accent-soft: #b4c3dc;
+
+  /* The projects settling around the name on the home screen */
+  --animate-scatter: scatter 700ms ease-out both;
+  /* The photo strip: half its width, which holds one full copy of the photos */
+  --animate-drift: drift 90s linear infinite;
+
+  @keyframes scatter {
+    from {
+      opacity: 0;
+      transform: scale(0.92);
+    }
+  }
+
+  @keyframes drift {
+    to {
+      transform: translateX(calc(-50% - 0.25rem));
+    }
+  }
+}
+
+@layer base {
+  html {
+    background: var(--color-paper);
+    scroll-padding-top: 88px;
+  }
+
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display font-normal tracking-wide;
+  }
+
+  ::selection {
+    @apply bg-accent text-paper;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+}
+
+/* Title inside a section, a step below the main ones */
+@utility subtitle {
+  @apply font-display text-2xl tracking-wider text-ink/70;
+}
+
+/* Small section label above a title */
+@utility eyebrow {
+  @apply text-xs font-medium tracking-[0.16em] text-accent-deep uppercase;
+}

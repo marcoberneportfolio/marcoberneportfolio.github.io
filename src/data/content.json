@@ -1,0 +1,165 @@
+{
+	"site": {
+		"email": "berne.marco.ytbm@gmail.com",
+		"name": "Marco Berne",
+		"phone": "06 21 39 56 94",
+		"socials": [
+			{
+				"href": "https://www.instagram.com/marco_ordinaire/",
+				"label": "Instagram"
+			},
+			{
+				"href": "#",
+				"label": "Behance"
+			},
+			{
+				"href": "#",
+				"label": "LinkedIn"
+			}
+		]
+	},
+	"copy": {
+		"about": {
+			"cta": "Proposer une alternance",
+			"label": "À propos",
+			"mission": "Créer des contenus qui captent l’attention, transmettre un message et donner du sens à une communication : c’est ce que j’ai appris à faire concrètement à travers la création visuelle, la photographie et la production de contenus.",
+			"missionTitle": "Ma mission",
+			"path": "En MBA Communication, Marketing à l’EFAP Aix après un Bachelor Marketing Digital et e-commerce, je compte trois expériences en alternance. Chargé de communication visuelle et digitale à la Ville d’Aix-en-Provence, j’y ai conçu des supports print et digitaux, réalisé des reportages photo et analysé les performances des contenus. Auparavant, j’ai été conseiller de vente chez Stuff et chargé de communication chez Bouygues Telecom.",
+			"pathTitle": "Mon parcours",
+			"text": "Je m’appelle Marco Berne. Passionné par la création et la photographie, j’aime explorer différents formats et donner vie aux idées. Je souhaite aujourd’hui mettre ma créativité et mon énergie au service de la communication.",
+			"title": "À propos de moi",
+			"values": [
+				"Créativité",
+				"Originalité",
+				"Passion",
+				"Authenticité",
+				"Engagement"
+			],
+			"vision": "La communication ne se résume pas à créer de beaux visuels ou à publier sur les réseaux sociaux. C’est avant tout une manière de transmettre, de créer du lien et de donner du sens à un message. Cette vision guide mon approche : associer créativité, réflexion et compréhension des publics pour construire une communication cohérente et pertinente.",
+			"visionTitle": "Ma vision"
+		},
+		"contact": {
+			"extraField": {
+				"kind": "select",
+				"label": "Démarrage",
+				"options": [
+					"Dès que possible",
+					"Sous 1 mois",
+					"Sous 3 mois",
+					"Pas de date"
+				]
+			},
+			"label": "Contact",
+			"mailSubject": "Proposition d’alternance",
+			"messageLabel": "Votre besoin",
+			"messagePlaceholder": "Entreprise, poste, missions, équipe…",
+			"responseTime": "Réponse dans les meilleurs délais",
+			"sessionTypes": [
+				"Alternance",
+				"Stage",
+				"Mission ponctuelle",
+				"Entretien",
+				"Autre"
+			],
+			"submit": "Envoyer",
+			"text": "Vous cherchez un alternant en communication et marketing ? Présentez-moi votre structure et vos besoins, je vous réponds dans les meilleurs délais.",
+			"title": "Parlons de votre entreprise",
+			"typeLabel": "Type de proposition"
+		},
+		"faq": {
+			"aside": "Une autre question ?",
+			"asideEnd": ", je vous réponds dans les meilleurs délais.",
+			"asideLink": "Écrivez-moi",
+			"label": "Questions",
+			"title": "Questions fréquentes"
+		},
+		"footer": {
+			"description": "Communication et audiovisuel, à la recherche d’une alternance."
+		},
+		"header": {
+			"cta": "Proposer une alternance"
+		},
+		"intro": {
+			"availability": "Recherche d’alternance · PACA et Paris",
+			"label": "Portfolio · Communication & audiovisuel",
+			"primaryCta": "Proposer une alternance",
+			"role": "Alternant en communication et marketing",
+			"secondaryCta": "Voir les projets",
+			"text": "Passionné par la photographie et l’audiovisuel, en MBA Communication, Marketing à l’EFAP Aix (Bac +4), je cherche une alternance pour mettre ma créativité et mon énergie au service d’une entreprise."
+		},
+		"project": {
+			"cta": "Ce travail vous parle ?"
+		},
+		"services": {
+			"label": "Expertises",
+			"title": "Domaines d’intervention"
+		},
+		"video": {
+			"channelsTitle": "Montage vidéo",
+			"clientsTitle": "Entreprises",
+			"label": "Références",
+			"linkLabel": "Voir la chaîne",
+			"siteLabel": "Voir le site",
+			"text": "Mes expériences en entreprise, et du montage pour des créateurs YouTube où je travaille le rythme, les transitions et l’ambiance visuelle.",
+			"title": "Ils m’ont fait confiance"
+		},
+		"work": {
+			"label": "Travaux",
+			"text": "Graphisme, photographie et réseaux sociaux. Sélectionnez un projet pour le découvrir en détail.",
+			"title": "Projets récents"
+		}
+	},
+	"nav": [
+		{
+			"label": "Travaux",
+			"id": "travaux"
+		},
+		{
+			"label": "À propos",
+			"id": "apropos"
+		},
+		{
+			"label": "Contact",
+			"id": "contact"
+		}
+	],
+	"services": [
+		"Réseaux sociaux",
+		"Création de contenu",
+		"Graphisme sur la suite Adobe",
+		"Photographie",
+		"Montage vidéo",
+		"Site internet WordPress",
+		"Référencement naturel (SEO)",
+		"Benchmarks et analyses"
+	],
+	"faq": [
+		{
+			"a": "Une alternance en communication et marketing, avec des missions variées : réseaux sociaux, contenus, campagnes et événements.",
+			"q": "Quel type de poste recherchez-vous ?"
+		},
+		{
+			"a": "Je suis actuellement en MBA Communication, Marketing à l’EFAP Aix (Bac +4). Mon parcours compte aussi un Bachelor Chargé de Marketing Digital et E-Commerce, le service Communication de la Mairie d’Aix-en-Provence et une expérience en boutique, où j’ai travaillé sur les réseaux sociaux, la création d’un site web et la valorisation d’une identité visuelle.",
+			"q": "Quel est votre parcours ?"
+		},
+		{
+			"q": "Où pouvez-vous travailler ?",
+			"a": "En région PACA et à Paris. J’ai le permis B et je suis véhiculé."
+		},
+		{
+			"a": "Je m’adapte au calendrier de votre entreprise et à celui de ma formation. Le plus simple est d’en parler lors d’un premier échange.",
+			"q": "Quand pouvez-vous commencer ?"
+		},
+		{
+			"a": "Il dépend du calendrier de ma formation : je vous le transmets dès notre premier contact pour que vous puissiez vous projeter.",
+			"q": "Quel est votre rythme d’alternance ?"
+		},
+		{
+			"a": "La suite Adobe (Illustrator, InDesign, Photoshop, After Effects, Lightroom), Figma et CapCut pour la création, WordPress et Yoast SEO pour le web, Google Analytics et HubSpot pour le suivi.",
+			"q": "Quels outils utilisez-vous ?"
+		}
+	],
+	"cv": {
+		"download": "Télécharger mon CV"
+	}
+}

@@ -1,0 +1,70 @@
+{
+	"hero": [
+		{
+			"src": "/media/hero/01.jpg",
+			"alt": "vieux port et fort saint jean"
+		},
+		{
+			"src": "/media/hero/02.jpg",
+			"alt": "notre dame de la garde sur la ville"
+		},
+		{
+			"src": "/media/hero/03.jpg",
+			"alt": "calanque vue du ciel"
+		},
+		{
+			"src": "/media/hero/04.jpg",
+			"alt": "notre dame de la garde"
+		},
+		{
+			"src": "/media/hero/05.jpg",
+			"alt": "quais du vieux port"
+		},
+		{
+			"src": "/media/hero/06.jpg",
+			"alt": "calanques et pins"
+		},
+		{
+			"src": "/media/hero/07.jpg",
+			"alt": "vieux port au crepuscule"
+		},
+		{
+			"src": "/media/hero/08.jpg",
+			"alt": "cote marseillaise"
+		},
+		{
+			"src": "/media/hero/09.jpg",
+			"alt": "palais en bord de mer"
+		},
+		{
+			"src": "/media/hero/10.jpg",
+			"alt": "calanque bleue"
+		},
+		{
+			"src": "/media/hero/11.jpg",
+			"alt": "port et collines"
+		},
+		{
+			"src": "/media/hero/12.jpg",
+			"alt": "voiliers du vieux port"
+		}
+	],
+	"about": {
+		"src": "/media/about/01.jpg",
+		"alt": "portrait marco berne"
+	},
+	"testimonials": [
+		{
+			"src": "/media/testimonials/01.jpg",
+			"alt": "reseaux sociaux sur smartphone"
+		},
+		{
+			"src": "/media/testimonials/02.jpg",
+			"alt": "projet en equipe"
+		},
+		{
+			"src": "/media/testimonials/03.jpg",
+			"alt": "evenement etudiant"
+		}
+	]
+}
