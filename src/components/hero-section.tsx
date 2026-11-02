@@ -130,7 +130,6 @@ export default function HeroSection({ onOpen }: { onOpen: (index: number) => voi
 					<h1 className="mt-4 text-7xl leading-[0.9] sm:text-8xl">{SITE.name}</h1>
 					<p className="mt-3 font-display text-2xl leading-tight tracking-wide text-accent-deep sm:text-3xl md:text-4xl">{COPY.intro.role}</p>
 					<p className="mt-2 text-sm font-medium">{COPY.intro.availability}</p>
-					<p className="mt-5 hidden max-w-lg text-base leading-relaxed text-slate sm:block [@media(max-height:700px)]:hidden">{COPY.intro.text}</p>
 					<div className="pointer-events-auto mt-7 flex flex-wrap items-center justify-center gap-x-7 gap-y-4">
 						<CvLink>{CV.download}</CvLink>
 						<ActionLink to="contact" variant="quiet">
