@@ -111,6 +111,8 @@ code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size
 		{ id: 'accueil', title: 'Accueil', hint: 'Le CV téléchargé se remplace dans le dossier site\\public\\cv.', fields: [F('copy.intro.label', 'Petite ligne au-dessus du nom'), F('copy.intro.role', 'Titre sous le nom'), F('copy.intro.text', 'Présentation', true), F('cv.download', 'Bouton du CV'), F('copy.intro.primaryCta', 'Premier lien'), F('copy.intro.secondaryCta', 'Second lien')] },
 		{ id: 'travaux', title: 'Projets', hint: 'Les projets eux-mêmes se modifient dans l’artefact Projets du portfolio.', fields: [F('copy.work.label', 'Petite ligne'), F('copy.work.title', 'Titre'), F('copy.work.text', 'Texte d’introduction', true)] },
 		{ id: 'expertises', title: 'Expertises', fields: [F('copy.services.label', 'Petite ligne'), F('copy.services.title', 'Titre')], lists: [{ path: 'services', label: 'Expertises', blank: '' }] },
+		{ id: 'outils', title: 'Outils', hint: 'Chaque outil s’affiche en logo à côté de l’expertise dont il porte le nom exact. Seuls les outils qui ont déjà un logo apparaissent : demandez à Claude pour en ajouter un nouveau.', fields: [],
+			lists: [{ path: 'tools', label: 'Outils', keys: [['name', 'Outil'], ['group', 'Expertise']], blank: { name: '', group: '' } }] },
 		{ id: 'apropos', title: 'À propos', fields: [F('copy.about.label', 'Petite ligne'), F('copy.about.title', 'Titre'), F('copy.about.text', 'Présentation', true), F('copy.about.pathTitle', 'Titre du parcours'), F('copy.about.path', 'Parcours', true), F('copy.about.cta', 'Bouton'), F('copy.about.visionTitle', 'Titre de la vision'), F('copy.about.vision', 'Vision', true), F('copy.about.missionTitle', 'Titre de la mission'), F('copy.about.mission', 'Mission', true)],
 			lists: [{ path: 'copy.about.values', label: 'Valeurs', blank: '' }] },
 		{ id: 'questions', title: 'Questions fréquentes', fields: [F('copy.faq.label', 'Petite ligne'), F('copy.faq.title', 'Titre'), F('copy.faq.aside', 'Phrase d’appel'), F('copy.faq.asideLink', 'Lien vers le contact'), F('copy.faq.asideEnd', 'Fin de la phrase')],
@@ -191,6 +193,7 @@ code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size
 		delete out.updatedAt;
 		const trim = (list, test) => list.filter(test);
 		out.services = trim(out.services, (s) => s.trim());
+		out.tools = trim(out.tools, (t) => t.name.trim());
 		out.copy.about.values = trim(out.copy.about.values, (s) => s.trim());
 		out.copy.contact.sessionTypes = trim(out.copy.contact.sessionTypes, (s) => s.trim());
 		out.copy.contact.extraField.options = trim(out.copy.contact.extraField.options, (s) => s.trim());

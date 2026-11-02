@@ -17,6 +17,7 @@ export const COPY = {
 
 export const NAV = content.nav;
 export const SERVICES = content.services;
+export const TOOLS = content.tools;
 export const FAQ = content.faq;
 export const CV = content.cv;
 

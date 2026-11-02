@@ -133,6 +133,30 @@
 		"Référencement naturel (SEO)",
 		"Benchmarks et analyses"
 	],
+	"tools": [
+		{ "group": "Réseaux sociaux", "name": "Instagram" },
+		{ "group": "Réseaux sociaux", "name": "TikTok" },
+		{ "group": "Création de contenu", "name": "Claude" },
+		{ "group": "Création de contenu", "name": "Notion" },
+		{ "group": "Création de contenu", "name": "Trello" },
+		{ "group": "Graphisme sur la suite Adobe", "name": "Adobe Illustrator" },
+		{ "group": "Graphisme sur la suite Adobe", "name": "Adobe InDesign" },
+		{ "group": "Graphisme sur la suite Adobe", "name": "Adobe Photoshop" },
+		{ "group": "Graphisme sur la suite Adobe", "name": "Figma" },
+		{ "group": "Photographie", "name": "Adobe Lightroom" },
+		{ "group": "Montage vidéo", "name": "Adobe After Effects" },
+		{ "group": "Montage vidéo", "name": "DaVinci Resolve" },
+		{ "group": "Montage vidéo", "name": "CapCut" },
+		{ "group": "Site internet WordPress", "name": "WordPress" },
+		{ "group": "Site internet WordPress", "name": "PageSpeed Insights" },
+		{ "group": "Site internet WordPress", "name": "Cybersécurité" },
+		{ "group": "Référencement naturel (SEO)", "name": "Yoast SEO" },
+		{ "group": "Référencement naturel (SEO)", "name": "Semrush" },
+		{ "group": "Benchmarks et analyses", "name": "Google Analytics" },
+		{ "group": "Benchmarks et analyses", "name": "HubSpot" },
+		{ "group": "Benchmarks et analyses", "name": "Brevo" },
+		{ "group": "Benchmarks et analyses", "name": "Excel" }
+	],
 	"faq": [
 		{
 			"a": "Une alternance en communication et marketing, avec des missions variées : réseaux sociaux, contenus, campagnes et événements.",
