@@ -11,7 +11,7 @@ export default function SiteHeader() {
 	return (
 		<header className="fixed inset-x-0 top-0 z-40 border-b border-line bg-paper">
 			<div className="mx-auto flex h-[72px] max-w-[1320px] items-center justify-between gap-6 px-5 md:px-10">
-				<ActionLink to="top" variant="quiet" onNavigate={close} className="border-0 py-0">
+				<ActionLink to="top" variant="quiet" onNavigate={close} className="group/logo border-0 py-0">
 					<Logo />
 				</ActionLink>
 
