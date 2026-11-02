@@ -29,29 +29,6 @@ const SKETCHES: { x: number; y: number; w: number; r: number; view: string; art:
 		),
 	},
 	{
-		// A layout being worked out: picture, lines of text, and the note of the version
-		x: 15.5,
-		y: 30.5,
-		w: 9.5,
-		r: 4,
-		view: '0 0 130 120',
-		art: (
-			<>
-				<path d="M10 8C40 6 80 7 96 8C98 40 97 80 96 104C70 106 35 105 11 104C9 75 9 40 10 8Z" />
-				<path d="M20 18H86V55H20Z" />
-				<path d="M20 18L86 55M86 18L20 55" />
-				<path d="M20 66C35 64 55 67 86 65" />
-				<path d="M20 75C40 77 60 73 80 75" />
-				<path d="M20 84C30 83 45 85 58 84" />
-				<path d="M64 82H86V96H64Z" />
-				<text x="88" y="118" fontSize="17" style={NOTE} fill="currentColor" stroke="none">
-					v2
-				</text>
-				<path d="M84 104C96 100 108 104 106 112C104 120 88 120 85 113C83 108 88 104 95 104" />
-			</>
-		),
-	},
-	{
 		// A note pointing at the photo beside it
 		x: 73.5,
 		y: 25,
@@ -123,8 +100,8 @@ const SKETCHES: { x: number; y: number; w: number; r: number; view: string; art:
 	},
 	{
 		// The colours of the site, tried out as in a swatch book
-		x: 86.5,
-		y: 61,
+		x: 15.5,
+		y: 32,
 		w: 9.5,
 		r: 3,
 		view: '0 0 130 80',
