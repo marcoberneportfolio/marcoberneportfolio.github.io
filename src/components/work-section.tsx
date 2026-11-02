@@ -5,6 +5,14 @@ import { projects } from '@/data/projects';
 import { COPY } from '@/data/site';
 import { cn } from '@/lib/utils';
 
+// Colour of the hover panel for each category, written out in full so Tailwind generates them
+const HOVER_COLORS: Record<string, string> = {
+	graphisme: 'sm:pointer-fine:bg-sky',
+	photographie: 'sm:pointer-fine:bg-ochre',
+	'réseaux sociaux': 'sm:pointer-fine:bg-tangerine',
+};
+const hoverColor = (category: string) => HOVER_COLORS[category.toLowerCase()] ?? 'sm:pointer-fine:bg-sky';
+
 export default function WorkSection({ onOpen }: { onOpen: (index: number) => void }) {
 	const categories = useMemo(() => [...new Set(projects.map((p) => p.category))], []);
 	const [category, setCategory] = useState(categories[0]);
@@ -52,8 +60,13 @@ export default function WorkSection({ onOpen }: { onOpen: (index: number) => voi
 										loading="lazy"
 										className="aspect-[4/5] h-auto w-full object-cover transition-transform sm:aspect-auto duration-700 ease-out group-hover:scale-[1.02] motion-reduce:transform-none"
 									/>
-									{/* With a mouse on a computer the title only shows on hover, large on a plain logo blue that hides the photo, rising slightly */}
-									<span className="absolute inset-x-0 bottom-0 block bg-linear-to-t from-ink-deep/90 via-ink-deep/60 via-55% to-transparent px-5 pt-12 pb-3.5 text-paper transition-opacity duration-300 ease-out sm:pointer-fine:inset-0 sm:pointer-fine:flex sm:pointer-fine:flex-col sm:pointer-fine:justify-center sm:pointer-fine:bg-sky sm:pointer-fine:bg-none sm:pointer-fine:p-8 sm:pointer-fine:text-ink sm:pointer-fine:opacity-0 sm:pointer-fine:group-hover:opacity-100 sm:pointer-fine:group-focus-visible:opacity-100">
+									{/* With a mouse on a computer the title only shows on hover, large on a plain colour of its category that hides the photo, rising slightly */}
+									<span
+										className={cn(
+											'absolute inset-x-0 bottom-0 block bg-linear-to-t from-ink-deep/90 via-ink-deep/60 via-55% to-transparent px-5 pt-12 pb-3.5 text-paper transition-opacity duration-300 ease-out sm:pointer-fine:inset-0 sm:pointer-fine:flex sm:pointer-fine:flex-col sm:pointer-fine:justify-center sm:pointer-fine:bg-none sm:pointer-fine:p-8 sm:pointer-fine:text-ink sm:pointer-fine:opacity-0 sm:pointer-fine:group-hover:opacity-100 sm:pointer-fine:group-focus-visible:opacity-100',
+											hoverColor(project.category)
+										)}
+									>
 										<span className="block font-display text-3xl leading-none tracking-wide text-balance transition-[translate] duration-500 ease-out group-hover:-translate-y-1 first-letter:uppercase motion-reduce:transform-none sm:pointer-fine:translate-y-3 sm:pointer-fine:text-5xl sm:pointer-fine:leading-[0.95] sm:pointer-fine:group-hover:translate-y-0 sm:pointer-fine:group-focus-visible:translate-y-0">
 											{project.title}
 										</span>

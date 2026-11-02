@@ -17,6 +17,9 @@
   --color-accent-soft: #b4c3dc;
   /* The light blue of the B in the logo */
   --color-sky: #6db0d9;
+  /* Hover colours of the photography and social media projects, beside the sky of graphic design */
+  --color-ochre: #d6a046;
+  --color-tangerine: #f08a4b;
 
   /* The projects settling around the name on the home screen */
   --animate-scatter: scatter 700ms ease-out both;
