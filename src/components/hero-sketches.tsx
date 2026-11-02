@@ -141,12 +141,16 @@ const SKETCHES: { x: number; y: number; w: number; r: number; view: string; art:
 	},
 ];
 
+const SCALE = 0.65;
+
 /** Same spreading out as the projects when the page scrolls, from where the drawing sits. */
 function sketchStyle(s: (typeof SKETCHES)[number], i: number) {
+	// Drawn smaller than their spot, around its middle, so they stay discreet beside the projects
+	const w = s.w * SCALE;
 	return {
-		left: `${s.x}%`,
-		top: `${s.y}%`,
-		width: `${s.w}%`,
+		left: `${s.x + (s.w - w) / 2}%`,
+		top: `${s.y + (s.w - w) / 2}%`,
+		width: `${w}%`,
 		'--dx': `${(s.x + s.w / 2 - 50) * 1.05}vw`,
 		'--dy': `${(s.y + 6 - 50) * 1.05}svh`,
 		transform: `translate(calc(var(--scroll, 0) * var(--dx)), calc(var(--scroll, 0) * var(--dy))) rotate(${s.r}deg)`,
