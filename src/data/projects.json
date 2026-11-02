@@ -676,6 +676,202 @@
 		]
 	},
 	{
+		"slug": "ne-bougez-surtout-pas-pour-la-photo",
+		"title": "Ne bougez surtout pas pour la photo",
+		"category": "Réseaux sociaux",
+		"year": 2026,
+		"details": [
+			{
+				"label": "Livrables",
+				"value": "Reel Instagram"
+			}
+		],
+		"summary": "Ne bougez surtout pas pour la photo… en photo de rue, la pose est déjà là.",
+		"description": [],
+		"cover": {
+			"src": "/projects/assets/6907898cd0f318cd6ba8823069242787.jpg",
+			"alt": "Image de couverture du reel Ne bougez surtout pas pour la photo",
+			"width": 1216,
+			"height": 2160,
+			"thumb": "/projects/thumbs/6907898cd0f318cd6ba8823069242787.jpg"
+		},
+		"gallery": [
+			{
+				"src": "/projects/assets/2c2eae0b06ce9793f6381f66bb0addaf.mp4",
+				"alt": "Reel Ne bougez surtout pas pour la photo",
+				"type": "video"
+			}
+		]
+	},
+	{
+		"slug": "pov-tu-voles-le-concept",
+		"title": "POV : tu voles le concept",
+		"category": "Réseaux sociaux",
+		"year": 2026,
+		"details": [
+			{
+				"label": "Livrables",
+				"value": "Reel Instagram"
+			}
+		],
+		"summary": "POV : tu voles le concept de @auregendron.",
+		"description": [],
+		"cover": {
+			"src": "/projects/assets/90343bf2b18e37e46ea31a83105ab46c.jpg",
+			"alt": "Image de couverture du reel POV : tu voles le concept",
+			"width": 1218,
+			"height": 2160,
+			"thumb": "/projects/thumbs/90343bf2b18e37e46ea31a83105ab46c.jpg"
+		},
+		"gallery": [
+			{
+				"src": "/projects/assets/3356b7f81e576178e6c120be09ebbe9a.mp4",
+				"alt": "Reel POV : tu voles le concept",
+				"type": "video"
+			}
+		]
+	},
+	{
+		"slug": "le-tableau-oriental",
+		"title": "Le « tableau oriental »",
+		"category": "Réseaux sociaux",
+		"year": 2026,
+		"details": [
+			{
+				"label": "Livrables",
+				"value": "Reel Instagram"
+			}
+		],
+		"summary": "Le bleu, les bracelets, les couleurs… j’étais obligé.",
+		"description": [],
+		"cover": {
+			"src": "/projects/assets/5dfb9db7d0fb5eb7b6e2a81c88b46e1c.jpg",
+			"alt": "Image de couverture du reel Le « tableau oriental »",
+			"width": 1216,
+			"height": 2160,
+			"thumb": "/projects/thumbs/5dfb9db7d0fb5eb7b6e2a81c88b46e1c.jpg"
+		},
+		"gallery": [
+			{
+				"src": "/projects/assets/452502d82d108ad46670e2cc7a962927.mp4",
+				"alt": "Reel Le « tableau oriental »",
+				"type": "video"
+			}
+		]
+	},
+	{
+		"slug": "portrait-devant-sa-boutique",
+		"title": "Portrait devant sa boutique",
+		"category": "Réseaux sociaux",
+		"year": 2026,
+		"details": [
+			{
+				"label": "Livrables",
+				"value": "Reel Instagram"
+			}
+		],
+		"summary": "Petit portrait de cette gentille dame devant sa boutique. N’hésitez pas à lui rendre visite !",
+		"description": [],
+		"cover": {
+			"src": "/projects/assets/4963647caa46601743267fd209bd197c.jpg",
+			"alt": "Image de couverture du reel Portrait devant sa boutique",
+			"width": 1216,
+			"height": 2160,
+			"thumb": "/projects/thumbs/4963647caa46601743267fd209bd197c.jpg"
+		},
+		"gallery": [
+			{
+				"src": "/projects/assets/7c14798f59f22d9987af3d14825be597.mp4",
+				"alt": "Reel Portrait devant sa boutique",
+				"type": "video"
+			}
+		]
+	},
+	{
+		"slug": "street-photo-derniere-partie",
+		"title": "Street photo, dernière partie",
+		"category": "Réseaux sociaux",
+		"year": 2026,
+		"details": [
+			{
+				"label": "Livrables",
+				"value": "Reel Instagram"
+			}
+		],
+		"summary": "Dernière partie de ma session de street photo.",
+		"description": [],
+		"cover": {
+			"src": "/projects/assets/33fbdbbd5df6b3853c6fb66c0c5d904b.jpg",
+			"alt": "Image de couverture du reel Street photo, dernière partie",
+			"width": 1218,
+			"height": 2160,
+			"thumb": "/projects/thumbs/33fbdbbd5df6b3853c6fb66c0c5d904b.jpg"
+		},
+		"gallery": [
+			{
+				"src": "/projects/assets/465dfdc0ecea7d63709ea038217ffa8c.mp4",
+				"alt": "Reel Street photo, dernière partie",
+				"type": "video"
+			}
+		]
+	},
+	{
+		"slug": "street-photo-partie-2",
+		"title": "Street photo, partie 2",
+		"category": "Réseaux sociaux",
+		"year": 2026,
+		"details": [
+			{
+				"label": "Livrables",
+				"value": "Reel Instagram"
+			}
+		],
+		"summary": "Deuxième partie de ma session de street photo.",
+		"description": [],
+		"cover": {
+			"src": "/projects/assets/6ec82172e01fcc5a77d46da36cde5e5d.jpg",
+			"alt": "Image de couverture du reel Street photo, partie 2",
+			"width": 1216,
+			"height": 2160,
+			"thumb": "/projects/thumbs/6ec82172e01fcc5a77d46da36cde5e5d.jpg"
+		},
+		"gallery": [
+			{
+				"src": "/projects/assets/44017531629325ce762481fdc75927a8.mp4",
+				"alt": "Reel Street photo, partie 2",
+				"type": "video"
+			}
+		]
+	},
+	{
+		"slug": "photographier-un-combat-de-boxe",
+		"title": "Photographier un combat de boxe",
+		"category": "Réseaux sociaux",
+		"year": 2026,
+		"details": [
+			{
+				"label": "Livrables",
+				"value": "Reel Instagram"
+			}
+		],
+		"summary": "POV : tu photographies le combat de la soirée entre Uisma Lima et Souleimane Mohamedi.",
+		"description": [],
+		"cover": {
+			"src": "/projects/assets/c51e2a1a7a784786f71a634d189bb156.jpg",
+			"alt": "Image de couverture du reel Photographier un combat de boxe",
+			"width": 640,
+			"height": 1136,
+			"thumb": "/projects/thumbs/c51e2a1a7a784786f71a634d189bb156.jpg"
+		},
+		"gallery": [
+			{
+				"src": "/projects/assets/06c51fdc5017a1e87a7fe9a64b3b423c.mp4",
+				"alt": "Reel Photographier un combat de boxe",
+				"type": "video"
+			}
+		]
+	},
+	{
 		"slug": "la-jeunesse-se-rebelle",
 		"title": "La jeunesse se rebelle",
 		"category": "Photographie",
