@@ -38,9 +38,10 @@ export default function WorkSection({ onOpen }: { onOpen: (index: number) => voi
 					))}
 				</div>
 
-				<div className="mt-12 gap-8 sm:columns-2 lg:columns-3">
+				{/* On phones the projects scroll sideways, the next one peeking in, instead of making a long column */}
+				<div className="-mx-5 mt-8 flex snap-x snap-mandatory scroll-px-5 items-start gap-4 overflow-x-auto px-5 pb-4 sm:mx-0 sm:mt-12 sm:block sm:gap-8 sm:overflow-visible sm:px-0 sm:pb-0 sm:columns-2 lg:columns-3">
 					{shown.map(({ project, index }) => (
-						<Reveal key={project.slug} className="mb-8 break-inside-avoid">
+						<Reveal key={project.slug} className="w-[80%] shrink-0 snap-start sm:mb-8 sm:w-auto sm:break-inside-avoid">
 							<button type="button" onClick={() => onOpen(index)} className="group block w-full cursor-pointer text-left">
 								<span className="relative block overflow-hidden bg-limestone">
 									<img
@@ -49,7 +50,7 @@ export default function WorkSection({ onOpen }: { onOpen: (index: number) => voi
 										width={project.cover.width}
 										height={project.cover.height}
 										loading="lazy"
-										className="h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.02] motion-reduce:transform-none"
+										className="aspect-[4/5] h-auto w-full object-cover transition-transform sm:aspect-auto duration-700 ease-out group-hover:scale-[1.02] motion-reduce:transform-none"
 									/>
 									<span className="absolute inset-x-0 bottom-0 block bg-linear-to-t from-ink-deep/90 via-ink-deep/60 via-55% to-transparent px-5 pt-12 pb-3.5 text-paper">
 										<span className="block font-display text-3xl leading-none tracking-wide text-balance transition-transform duration-300 ease-out group-hover:-translate-y-1 first-letter:uppercase motion-reduce:transform-none">
