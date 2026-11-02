@@ -1,8 +1,9 @@
 import ActionLink from '@/components/ui/action-link';
+import CvLink from '@/components/ui/cv-link';
 import Reveal from '@/components/ui/reveal';
 import SectionHead from '@/components/ui/section-head';
 import { media } from '@/data/media';
-import { COPY, SITE } from '@/data/site';
+import { COPY, CV, SITE } from '@/data/site';
 
 export default function AboutSection() {
 	return (
@@ -20,9 +21,10 @@ export default function AboutSection() {
 						<p className="mt-7 max-w-xl text-lg leading-relaxed text-slate">{COPY.about.text}</p>
 						<h3 className="subtitle mt-9">{COPY.about.pathTitle}</h3>
 						<p className="mt-2 max-w-xl text-base leading-relaxed text-slate">{COPY.about.path}</p>
-						<ActionLink to="contact" className="mt-9">
-							{COPY.about.cta}
-						</ActionLink>
+						<div className="mt-9 flex flex-wrap gap-3">
+							<ActionLink to="contact">{COPY.about.cta}</ActionLink>
+							<CvLink className="border border-ink bg-transparent text-ink hover:bg-ink hover:text-paper">{CV.download}</CvLink>
+						</div>
 					</Reveal>
 				</div>
 
