@@ -1,4 +1,5 @@
 import { useLayoutEffect, useRef, type CSSProperties } from 'react';
+import HeroSketches from '@/components/hero-sketches';
 import ActionLink from '@/components/ui/action-link';
 import CvLink from '@/components/ui/cv-link';
 import { projects, type Project } from '@/data/projects';
@@ -98,6 +99,7 @@ export default function HeroSection({ onOpen }: { onOpen: (index: number) => voi
 	return (
 		<section ref={root} id="hero" aria-label="Présentation" className="relative h-[200svh] bg-limestone motion-reduce:h-svh">
 			<div className="sticky top-0 h-svh overflow-hidden">
+				<HeroSketches />
 				{PICKS.map((project, i) => (
 					<button
 						key={project.slug}

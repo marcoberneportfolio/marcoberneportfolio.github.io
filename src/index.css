@@ -23,6 +23,8 @@
 
   /* The projects settling around the name on the home screen */
   --animate-scatter: scatter 700ms ease-out both;
+  /* The drawings of the home screen, revealed from left to right as if being drawn */
+  --animate-sketch: sketch 900ms ease-out both;
   /* The photo strip: half its width, which holds one full copy of the photos */
   --animate-drift: drift 90s linear infinite;
 
@@ -30,6 +32,15 @@
     from {
       opacity: 0;
       transform: scale(0.92);
+    }
+  }
+
+  @keyframes sketch {
+    from {
+      clip-path: inset(0 100% 0 0);
+    }
+    to {
+      clip-path: inset(0 -10% 0 0);
     }
   }
 
