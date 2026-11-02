@@ -45,7 +45,8 @@ function ReferenceList({ title, items, linkLabel }: { title: string; items: Refe
 
 export default function VideoSection() {
 	return (
-		<section id="references" className="mx-auto max-w-[1320px] scroll-mt-20 px-5 pb-20 md:px-10 md:pb-32">
+		// Relative with a background: on phones the short project section leaves the end of the hero underneath
+		<section id="references" className="relative mx-auto max-w-[1320px] scroll-mt-20 bg-paper px-5 pb-20 md:px-10 md:pb-32">
 			<div className="grid gap-6 border-t border-line pt-16 md:pt-20 lg:grid-cols-2 lg:items-end">
 				<SectionHead label={COPY.video.label} title={COPY.video.title} />
 				<p className="max-w-md text-base leading-relaxed text-slate lg:justify-self-end">{COPY.video.text}</p>

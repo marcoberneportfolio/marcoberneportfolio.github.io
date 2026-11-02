@@ -15,7 +15,7 @@ export default function WorkSection({ onOpen }: { onOpen: (index: number) => voi
 	return (
 		// The negative margin slides this section over the pinned hero
 		<section id="travaux" className="relative -mt-[100svh] scroll-mt-20 bg-paper motion-reduce:mt-0">
-			<div className="mx-auto max-w-[1320px] px-5 pt-14 pb-20 md:px-10 md:pt-20 md:pb-32">
+			<div className="mx-auto max-w-[1320px] px-5 pt-14 pb-6 sm:pb-20 md:px-10 md:pt-20 md:pb-32">
 				<div className="grid gap-6 lg:grid-cols-2 lg:items-end">
 					<SectionHead label={COPY.work.label} title={COPY.work.title} />
 					<p className="max-w-md text-base leading-relaxed text-slate lg:justify-self-end">{COPY.work.text}</p>
