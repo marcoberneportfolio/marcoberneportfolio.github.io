@@ -7,6 +7,7 @@ import PhotoBand from '@/components/photo-band';
 import ProjectModal from '@/components/project-modal';
 import ServicesSection from '@/components/services-section';
 import SiteFooter from '@/components/site-footer';
+import SiteCursor from '@/components/site-cursor';
 import SiteHeader from '@/components/site-header';
 import VideoSection from '@/components/video-section';
 import WorkSection from '@/components/work-section';
@@ -60,6 +61,8 @@ export default function App() {
       <SiteFooter />
 
       <ProjectModal index={openProject} onClose={closeProject} onNavigate={showProject} />
+
+      <SiteCursor />
     </>
   );
 }
