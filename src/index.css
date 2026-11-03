@@ -58,6 +58,8 @@
 @layer base {
   html {
     background: var(--color-paper);
+    /* Nothing sticking out on the side may let a phone pan the page sideways */
+    overflow-x: clip;
     scroll-padding-top: 88px;
   }
 

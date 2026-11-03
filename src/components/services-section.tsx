@@ -23,7 +23,7 @@ function ToolLogos({ service }: { service: string }) {
 						</svg>
 						<span
 							aria-hidden="true"
-							className="pointer-events-none absolute right-1/2 bottom-full z-10 mb-2 translate-x-1/2 translate-y-1 bg-ink px-2 py-1 text-xs whitespace-nowrap text-paper opacity-0 transition duration-200 ease-out group-hover/tool:translate-y-0 group-hover/tool:opacity-100 group-focus/tool:translate-y-0 group-focus/tool:opacity-100"
+							className="pointer-events-none absolute right-0 bottom-full z-10 mb-2 translate-y-1 md:right-1/2 md:translate-x-1/2 bg-ink px-2 py-1 text-xs whitespace-nowrap text-paper opacity-0 transition duration-200 ease-out group-hover/tool:translate-y-0 group-hover/tool:opacity-100 group-focus/tool:translate-y-0 group-focus/tool:opacity-100"
 						>
 							{tool.name}
 						</span>
