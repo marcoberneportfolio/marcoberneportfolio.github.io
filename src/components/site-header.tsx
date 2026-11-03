@@ -6,25 +6,20 @@ import { COPY, CV, NAV } from '@/data/site';
 import { cn } from '@/lib/utils';
 
 /**
- * The bar starts along the bottom of the home screen and rises with the page as it scrolls,
- * right above the projects coming up, until it reaches the top where it stays. The scroll
- * only moves it through its style; React re-renders only when it docks or leaves the top.
+ * Whether the bar has reached the top of the screen. The bar itself is moved by the browser
+ * (it is sticky), so this only tells which way the phone menu unfolds.
  */
-function useRisingBar() {
+function useDocked() {
 	const bar = useRef<HTMLElement>(null);
 	const [docked, setDocked] = useState(false);
 
 	useLayoutEffect(() => {
 		const el = bar.current;
-		const projects = document.getElementById('travaux');
-		if (!el || !projects) return;
+		if (!el) return;
 		let frame = 0;
 		const update = () => {
 			frame = 0;
-			// Riding on the top edge of the projects, which start just below the home screen
-			const offset = Math.max(0, Math.min(window.innerHeight, projects.getBoundingClientRect().top) - el.offsetHeight);
-			el.style.transform = `translateY(${offset}px)`;
-			setDocked(offset === 0);
+			setDocked(el.getBoundingClientRect().top <= 0);
 		};
 		const onScroll = () => {
 			if (!frame) frame = requestAnimationFrame(update);
@@ -46,10 +41,18 @@ function useRisingBar() {
 export default function SiteHeader() {
 	const [open, setOpen] = useState(false);
 	const close = () => setOpen(false);
-	const { bar, docked } = useRisingBar();
+	const { bar, docked } = useDocked();
 
 	return (
-		<header ref={bar} className={cn('fixed inset-x-0 top-0 z-40 border-line bg-paper', docked ? 'border-b' : 'border-t')}>
+		// Placed in the page along the bottom of the home screen, right above the projects: it
+		// rises with them as the page scrolls, then sticks to the top for the rest of the page
+		<header
+			ref={bar}
+			className={cn(
+				'sticky top-0 z-40 -mt-[calc(100svh+72px)] border-line bg-paper motion-reduce:-mt-[72px]',
+				docked ? 'border-b' : 'border-t'
+			)}
+		>
 			<div className="mx-auto flex h-[72px] max-w-[1320px] items-center justify-between gap-6 px-5 md:px-10">
 				<ActionLink to="top" variant="quiet" onNavigate={close} className="group/logo border-0 py-0">
 					<Logo />

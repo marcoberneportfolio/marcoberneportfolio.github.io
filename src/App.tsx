@@ -45,10 +45,10 @@ export default function App() {
 
   return (
     <>
-      <SiteHeader />
-
       <main id="top">
         <HeroSection onOpen={showProject} />
+        {/* Between the two, so that it rises with the projects over the pinned home screen */}
+        <SiteHeader />
         <WorkSection onOpen={showProject} />
         <VideoSection />
         <ServicesSection />
