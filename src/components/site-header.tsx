@@ -1,15 +1,52 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ActionLink from '@/components/ui/action-link';
 import CvLink from '@/components/ui/cv-link';
 import Logo from '@/components/ui/logo';
 import { COPY, CV, NAV } from '@/data/site';
+import { cn } from '@/lib/utils';
+
+/** Whether the projects have come up the screen, from where the bar slides in. */
+function useProjectsReached() {
+	const [reached, setReached] = useState(false);
+
+	useEffect(() => {
+		const projects = document.getElementById('travaux');
+		if (!projects) return;
+		let frame = 0;
+		const update = () => {
+			frame = 0;
+			setReached(projects.getBoundingClientRect().top < window.innerHeight * 0.3);
+		};
+		const onScroll = () => {
+			if (!frame) frame = requestAnimationFrame(update);
+		};
+
+		update();
+		window.addEventListener('scroll', onScroll, { passive: true });
+		window.addEventListener('resize', onScroll);
+		return () => {
+			cancelAnimationFrame(frame);
+			window.removeEventListener('scroll', onScroll);
+			window.removeEventListener('resize', onScroll);
+		};
+	}, []);
+
+	return reached;
+}
 
 export default function SiteHeader() {
 	const [open, setOpen] = useState(false);
 	const close = () => setOpen(false);
+	// Out of the way on the home screen, which has its own buttons; back with the projects
+	const shown = useProjectsReached() || open;
 
 	return (
-		<header className="fixed inset-x-0 top-0 z-40 border-b border-line bg-paper">
+		<header
+			className={cn(
+				'fixed inset-x-0 top-0 z-40 border-b border-line bg-paper transition-transform duration-500 ease-out focus-within:translate-y-0 motion-reduce:transition-none',
+				!shown && '-translate-y-full'
+			)}
+		>
 			<div className="mx-auto flex h-[72px] max-w-[1320px] items-center justify-between gap-6 px-5 md:px-10">
 				<ActionLink to="top" variant="quiet" onNavigate={close} className="group/logo border-0 py-0">
 					<Logo />
