@@ -36,7 +36,7 @@ function ToolLogos({ service }: { service: string }) {
 
 export default function ServicesSection() {
 	return (
-		<section aria-labelledby="expertises" className="bg-limestone">
+		<section aria-labelledby="expertises" className="grain bg-limestone">
 			<div className="mx-auto grid max-w-[1320px] gap-10 px-5 py-20 md:px-10 md:py-28 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
 				<SectionHead label={COPY.services.label} title={COPY.services.title} />
 				<ul className="grid border-t border-line sm:grid-cols-2 sm:gap-x-10">

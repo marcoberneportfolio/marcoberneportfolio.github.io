@@ -1,21 +1,36 @@
+import { useRef } from 'react';
+import Camera3D from '@/components/camera-3d';
 import ActionLink from '@/components/ui/action-link';
 import CvLink from '@/components/ui/cv-link';
+import PhotoPrint from '@/components/ui/photo-print';
 import Reveal from '@/components/ui/reveal';
 import SectionHead from '@/components/ui/section-head';
 import { media } from '@/data/media';
 import { COPY, CV, SITE } from '@/data/site';
 
 export default function AboutSection() {
+	const flash = useRef<HTMLSpanElement>(null);
+
+	// Clicking the camera takes the portrait: a short white flash over it
+	const onShutter = () => {
+		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+		flash.current?.animate([{ opacity: 0.85 }, { opacity: 0 }], { duration: 320, easing: 'ease-out' });
+	};
+
 	return (
-		<section id="apropos" className="scroll-mt-20 bg-limestone">
+		<section id="apropos" className="grain scroll-mt-20 overflow-x-clip bg-limestone">
 			<div className="mx-auto max-w-[1320px] px-5 py-20 md:px-10 md:py-28">
 				<div className="grid items-center gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-20">
-					<img
-						src={media.about.src}
-						alt={`Portrait de ${SITE.name}`}
-						loading="lazy"
-						className="aspect-[4/5] w-full max-w-md object-cover object-top lg:max-w-none"
-					/>
+					{/* The portrait as a print on the desk, the camera that took it set down at its corner */}
+					<div className="relative max-w-md pb-10 lg:max-w-none lg:pb-0">
+						<PhotoPrint rotate={-2}>
+							<span className="relative block">
+								<img src={media.about.src} alt={`Portrait de ${SITE.name}`} loading="lazy" className="block aspect-[4/5] w-full object-cover object-top" />
+								<span ref={flash} className="absolute inset-0 bg-paper opacity-0" />
+							</span>
+						</PhotoPrint>
+						<Camera3D onShutter={onShutter} className="absolute -right-4 -bottom-6 origin-bottom-right scale-[0.55] sm:-right-24 sm:scale-[0.7] lg:-right-20 lg:-bottom-16 lg:scale-75" />
+					</div>
 					<Reveal>
 						<SectionHead label={COPY.about.label} title={COPY.about.title} />
 						<p className="mt-7 max-w-xl text-lg leading-relaxed text-slate">{COPY.about.text}</p>

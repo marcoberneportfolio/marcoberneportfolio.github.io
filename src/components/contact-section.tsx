@@ -101,7 +101,7 @@ export default function ContactSection() {
 	};
 
 	return (
-		<section id="contact" className="scroll-mt-[72px] bg-ink text-paper">
+		<section id="contact" className="grain grain-dark scroll-mt-[72px] bg-ink text-paper">
 			<div className="mx-auto grid max-w-[1320px] gap-14 px-5 py-20 md:px-10 md:py-28 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-20">
 				<div>
 					<SectionHead inverted label={COPY.contact.label} title={COPY.contact.title} />

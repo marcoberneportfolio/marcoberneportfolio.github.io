@@ -21,6 +21,10 @@
   --color-ochre: #d6a046;
   --color-tangerine: #f08a4b;
 
+  /* Shadows tinted with the night blue: a photo print laid down, lifted, and the 3D camera */
+  --shadow-print: 0 1px 1px rgb(20 38 63 / 0.08), 0 8px 16px -6px rgb(20 38 63 / 0.18), 0 24px 40px -18px rgb(20 38 63 / 0.28);
+  --shadow-print-lift: 0 2px 2px rgb(20 38 63 / 0.08), 0 18px 28px -10px rgb(20 38 63 / 0.22), 0 40px 60px -24px rgb(20 38 63 / 0.32);
+
   /* The projects settling around the name on the home screen */
   --animate-scatter: scatter 700ms ease-out both;
   /* The drawings of the home screen, revealed from left to right as if being drawn */
@@ -94,6 +98,30 @@
 /* Title inside a section, a step below the main ones */
 @utility subtitle {
   @apply font-display text-2xl tracking-wider text-ink/70;
+}
+
+/* Film grain over the ground of a section, under its content; the paper sections stay smooth */
+@utility grain {
+  position: relative;
+  isolation: isolate;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: var(--grain-opacity, 0.09);
+    mix-blend-mode: var(--grain-blend, multiply);
+    background-size: 180px 180px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+/* The same grain on the night blue, lightening instead of darkening */
+@utility grain-dark {
+  --grain-opacity: 0.16;
+  --grain-blend: screen;
 }
 
 /* Small section label above a title */

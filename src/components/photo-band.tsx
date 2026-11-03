@@ -21,7 +21,7 @@ const photos = FEATURED.map((slug) => ({ project: projects.find((p) => p.slug ==
 /** Strip of photographs drifting sideways; the second copy makes the loop seamless. */
 export default function PhotoBand({ onOpen }: { onOpen: (index: number) => void }) {
 	return (
-		<section aria-label="Galerie de photographies" className="group/band overflow-x-auto bg-limestone motion-safe:overflow-hidden">
+		<section aria-label="Galerie de photographies" className="group/band grain overflow-x-auto bg-limestone motion-safe:overflow-hidden">
 			<div className="flex w-max gap-2 motion-safe:animate-drift motion-safe:group-hover/band:[animation-play-state:paused] motion-safe:group-focus-within/band:[animation-play-state:paused]">
 				{[false, true].map((copy) =>
 					photos.map(({ project, index }) => (

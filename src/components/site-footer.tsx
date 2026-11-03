@@ -5,7 +5,7 @@ export default function SiteFooter() {
 	const socials = SITE.socials.filter((social) => social.href !== '#');
 
 	return (
-		<footer className="bg-ink-deep text-paper">
+		<footer className="grain grain-dark bg-ink-deep text-paper">
 			<div className="mx-auto flex max-w-[1320px] flex-col justify-between gap-8 px-5 py-10 md:px-10 lg:flex-row lg:items-center">
 				<div>
 					<p className="font-display text-3xl tracking-wide">{SITE.name}</p>

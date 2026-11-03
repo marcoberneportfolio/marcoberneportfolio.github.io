@@ -97,7 +97,7 @@ export default function HeroSection({ onOpen }: { onOpen: (index: number) => voi
 	}, []);
 
 	return (
-		<section ref={root} id="hero" aria-label="Présentation" className="relative h-[200svh] bg-limestone motion-reduce:h-svh">
+		<section ref={root} id="hero" aria-label="Présentation" className="grain relative h-[200svh] bg-limestone motion-reduce:h-svh">
 			<div className="sticky top-0 h-svh overflow-hidden">
 				<HeroSketches />
 				{PICKS.map((project, i) => (
