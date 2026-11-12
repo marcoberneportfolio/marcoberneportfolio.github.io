@@ -1,7 +1,7 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Reveal from '@/components/ui/reveal';
 import SectionHead from '@/components/ui/section-head';
-import { projects } from '@/data/projects';
+import { projects, type Project } from '@/data/projects';
 import { COPY } from '@/data/site';
 import { cn } from '@/lib/utils';
 
@@ -13,9 +13,46 @@ const HOVER_COLORS: Record<string, string> = {
 };
 const hoverColor = (category: string) => HOVER_COLORS[category.toLowerCase()] ?? 'sm:pointer-fine:bg-sky';
 
+// Width of a cover in the grid: one of three columns, two on tablets, most of the screen on phones
+const SIZES = '(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 80vw';
+
+/** The light thumbnail where it is sharp enough, the full cover on larger or sharper screens. */
+const srcSetOf = (cover: Project['cover']) => (cover.thumb && cover.width ? `${cover.thumb} 640w, ${cover.src} ${cover.width}w` : undefined);
+
+/**
+ * Once the page has loaded and the browser is idle, fetches the covers of every category, the
+ * same sizes the grid would pick, so that switching category shows them at once.
+ */
+function usePreloadCovers() {
+	useEffect(() => {
+		const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData;
+		if (saveData) return;
+		let idle = 0;
+		const preload = () => {
+			idle = (window.requestIdleCallback ?? ((run: () => void) => window.setTimeout(run, 200)))(() => {
+				for (const { cover } of projects) {
+					const image = new Image();
+					// Sizes first, so that the browser picks from the set like the grid does
+					image.sizes = SIZES;
+					const srcSet = srcSetOf(cover);
+					if (srcSet) image.srcset = srcSet;
+					image.src = cover.src;
+				}
+			});
+		};
+		if (document.readyState === 'complete') preload();
+		else window.addEventListener('load', preload, { once: true });
+		return () => {
+			window.removeEventListener('load', preload);
+			(window.cancelIdleCallback ?? window.clearTimeout)(idle);
+		};
+	}, []);
+}
+
 export default function WorkSection({ onOpen }: { onOpen: (index: number) => void }) {
 	const categories = useMemo(() => [...new Set(projects.map((p) => p.category))], []);
 	const [category, setCategory] = useState(categories[0]);
+	usePreloadCovers();
 	const shown = projects
 		.map((project, index) => ({ project, index }))
 		.filter(({ project }) => project.category === category);
@@ -54,6 +91,8 @@ export default function WorkSection({ onOpen }: { onOpen: (index: number) => voi
 								<span className="relative block overflow-hidden bg-limestone">
 									<img
 										src={project.cover.src}
+										srcSet={srcSetOf(project.cover)}
+										sizes={SIZES}
 										alt={project.cover.alt}
 										width={project.cover.width}
 										height={project.cover.height}
